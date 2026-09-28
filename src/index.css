@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-surface: #10121a;
+  --bg-card: rgba(16, 18, 27, 0.65);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-cyan: rgba(0, 243, 255, 0.35);
+  --neon-cyan: #00f3ff;
+  --neon-cyan-glow: rgba(0, 243, 255, 0.4);
+  --matrix-green: #00ff41;
+  --matrix-glow: rgba(0, 255, 65, 0.35);
+  --madrid-gold: #ffd700;
+  --madrid-gold-light: #fef08a;
+  --madrid-white: #ffffff;
+  --ferrari-red: #DC0000;
+  --ferrari-bright: #FF2800;
+  --text-main: #f4f4f6;
+  --text-muted: #8e95a5;
+  --font-body: 'Inter', 'Poppins', sans-serif;
+  --font-code: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-code);
+  letter-spacing: -0.02em;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-code);
+}
+
+/* Glassmorphism surfaces */
+.glass-panel {
+  background: rgba(13, 16, 26, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-cyan {
+  background: rgba(10, 16, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+/* Cyber Button Styling with Chamfered Corners */
+.cyber-button {
+  position: relative;
+  clip-path: polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.45);
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  transition: text-shadow 0.2s ease;
+}
+
+.glitch-text:hover {
+  text-shadow: 
+    2px 2px 0px #00f3ff,
+    -2px -2px 0px #ff0055,
+    0 0 16px rgba(0, 243, 255, 0.8);
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #07070b;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b2333;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 243, 255, 0.15);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f3ff;
+  box-shadow: 0 0 10px #00f3ff;
+}
+
+/* Typing cursor animation */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 9px;
+  height: 1.15em;
+  background-color: var(--neon-cyan);
+  vertical-align: middle;
+  margin-left: 5px;
+  animation: blink-cursor 0.8s infinite;
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* Card 3D tilt & hover */
+.tilt-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+  transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
+  border-color: rgba(0, 243, 255, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 243, 255, 0.2);
+}
+
+/* Social icons float */
+.social-icon-float {
+  transition: transform 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-icon-float:hover {
+  transform: translateY(-5px) scale(1.1);
+}

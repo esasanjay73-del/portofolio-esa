@@ -1,0 +1,8 @@
+{
+  "name": "Remix Esa Sanjaya ",
+  "description": "Portofolio interaktif Esa Sanjaya, Mahasiswa Ilmu Komputer Universitas Negeri Medan, Calon Cyber Security Engineer ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
